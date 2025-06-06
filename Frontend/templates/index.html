@@ -1,0 +1,29 @@
+
+
+{% extends 'base.html' %}
+
+{% block content%}   
+    <h1>Practice_Session</h1>
+    <form action="">
+        <div>
+            <label for="">Enter details : </label><br>
+            <input type="text" placeholder="Give some details about you...">
+        </div>
+        <div>
+            <input type="radio">
+            <label for="">Click to continue</label>
+        </div>
+    </form>
+    {{name}}
+    {{values.one}}
+    {{numbers}}
+    {% if role == "admin" %}
+        <h4>Welcome {{name}},your age is {{age}} it's correct</h4>
+    {% endif %}
+    {% for num in numbers %}
+        <p>The number is {{num}}</p>
+    {%  endfor %}
+
+{%endblock%}
+
+    
